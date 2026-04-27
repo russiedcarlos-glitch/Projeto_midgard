@@ -77,6 +77,3 @@ npx hardhat run scripts/interact.js --network sepolia
 
 ## 🛡️ Auditoria e Segurança
 A arquitetura de contratos foi desenhada seguindo os princípios de segurança da Web3 (como modificadores `nonReentrant`, uso do `Ownable` da OpenZeppelin e Checks-Effects-Interactions). Consulte o arquivo [Auditoria.md](./Auditoria.md) para visualizar o relatório detalhado de vulnerabilidades mitigadas.
-
-## 📄 Documentação Final e Fluxogramas
-Para ver o detalhamento do projeto, diagramas de UML/fluxo e a justificativa arquitetural requisitada na atividade, abra o arquivo principal: [U1C5O1T1_NomeSobrenome.md](./U1C5O1T1_NomeSobrenome.md).

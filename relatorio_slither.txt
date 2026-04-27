@@ -1,0 +1,34 @@
+'npx hardhat clean' running (wd: C:\Users\Adr1an\Documents\web-3\projeto1)
+'npx hardhat compile' running (wd: C:\Users\Adr1an\Documents\web-3\projeto1)
+Compiling 4 files with 0.8.24
+Compilation finished successfully
+
+INFO:Detectors:
+MidgardStaking.getLatestPrice() (contracts/MidgardStaking.sol#110-115) uses a stale price feed:
+        - AggregatorV3Interface(priceFeed).latestRoundData()
+        - Missing require(answeredInRound >= roundID, "Stale price")
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#stale-price-feed
+
+INFO:Detectors:
+MidgardStaking.claimReward() (contracts/MidgardStaking.sol#80-92) ignores return value by token.mint(msg.sender, reward)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#unchecked-transfer
+
+INFO:Detectors:
+MidgardDAO.createProposal(string) (contracts/MidgardDAO.sol#45-52) uses block.timestamp for comparisons:
+        - proposal.deadline = block.timestamp + 3 days
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#block-timestamp
+
+INFO:Detectors:
+Pragma version ^0.8.20 (contracts/MidgardToken.sol#2) allows old versions
+Pragma version ^0.8.20 (contracts/MidgardBuilderPass.sol#2) allows old versions
+Pragma version ^0.8.20 (contracts/MidgardStaking.sol#2) allows old versions
+Pragma version ^0.8.20 (contracts/MidgardDAO.sol#2) allows old versions
+solc-0.8.24 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+
+INFO:Slither:contracts/MidgardToken.sol analyzed (1 contracts with 88 detectors), 1 result(s) found
+INFO:Slither:contracts/MidgardBuilderPass.sol analyzed (1 contracts with 88 detectors), 1 result(s) found
+INFO:Slither:contracts/MidgardStaking.sol analyzed (1 contracts with 88 detectors), 3 result(s) found
+INFO:Slither:contracts/MidgardDAO.sol analyzed (1 contracts with 88 detectors), 2 result(s) found
+
+Slither finished. Found 7 issues (0 high, 2 medium, 5 low).

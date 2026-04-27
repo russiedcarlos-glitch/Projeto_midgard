@@ -1,0 +1,13 @@
+node_modules/
+artifacts/
+cache/
+.env
+.env.ed
+coverage/
+coverage.json
+typechain/
+typechain-types/
+build/
+dist/
+test_*.js
+test_*.cjs
